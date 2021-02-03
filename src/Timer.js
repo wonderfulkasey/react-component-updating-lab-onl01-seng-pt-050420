@@ -11,6 +11,7 @@ class Timer extends PureComponent {
   }
 
   //Your code here
+  
 
   componentDidMount() {
     this.interval = setInterval(
