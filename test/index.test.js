@@ -27,16 +27,4 @@ describe('<Timer />', () => {
     timerWrapper.unmount()
   });
 
-  it('calls shouldComponentUpdate', () => {
-    expect(Timer.prototype.shouldComponentUpdate, "shouldComponentUpdate was not found").to.not.equal(undefined)
-    stub(Timer.prototype, 'shouldComponentUpdate');
-
-    timerWrapper = shallow(<Timer />);
-
-    timerWrapper.setState({ time: 1, color: '#6134ac' })
-
-    expect(Timer.prototype.shouldComponentUpdate.calledOnce).to.equal(true);
-    timerWrapper.unmount()
-  })
-
-});
+ 
